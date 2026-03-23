@@ -1,0 +1,27 @@
+# Environment variables
+.env
+
+# Database
+*.db
+*.sqlite3
+cv_tailor.db
+
+# Python caches and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Python Virtual Environments
+venv/
+env/
+.venv/
+
+# IDE / Editor
+.vscode/
+.idea/
+
+# OS specific
+.DS_Store
+Thumbs.db

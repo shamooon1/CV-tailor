@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tailored Resume - {{ name }}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+        .header { text-align: center; border-bottom: 2px solid #333; padding-bottom: 20px; }
+        .section { margin-top: 20px; }
+        .keywords { color: #555; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ name }}</h1>
+        <p><strong>Skills:</strong> {{ skills }}</p>
+    </div>
+
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <p>{{ tailored_data.rewritten_summary }}</p>
+    </div>
+
+    <div class="section">
+        <h2>Experience Highlights</h2>
+        <ul>
+            {% for bullet in tailored_data.rewritten_top_bullets %}
+            <li>{{ bullet }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section keywords">
+        <h3>Relevant Keywords Emphasized</h3>
+        <p>{{ tailored_data.missing_keywords | join(', ') }}</p>
+    </div>
+</body>
+</html>
